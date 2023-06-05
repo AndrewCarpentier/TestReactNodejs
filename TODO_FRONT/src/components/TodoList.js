@@ -6,9 +6,15 @@ export default function TodoList({ todoList, deleteTodo, updateTodo }) {
     <ul>
       {todoList.map((t) =>
         t.edit ? (
-          <EditTodo key={t.id} todo={t} updateTodo={updateTodo} />
+          <EditTodo
+            role="listitem"
+            key={t.id}
+            todo={t}
+            updateTodo={updateTodo}
+          />
         ) : (
           <TodoItem
+            role="listitem"
             key={t.id}
             todo={t}
             deleteTodo={deleteTodo}
@@ -19,7 +25,7 @@ export default function TodoList({ todoList, deleteTodo, updateTodo }) {
     </ul>
   ) : (
     <>
-      <p>Aucune todo pour le moment</p>
+      <p data-testId="emptyListText">Aucune todo pour le moment</p>
     </>
   );
 }

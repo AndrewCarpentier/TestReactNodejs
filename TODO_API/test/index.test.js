@@ -66,7 +66,7 @@ describe("TODO API", () => {
       const todo = {
         id: 8,
         content: "test update todo content",
-        edit: true,
+        edit: false,
         done: false,
       };
       request
