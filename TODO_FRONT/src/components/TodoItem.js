@@ -1,4 +1,4 @@
-import styles from "./TodoItem.module.scss";
+// import styles from "./TodoItem.module.scss";
 export default function TodoItem({ todo, deleteTodo, updateTodo }) {
   async function modifyTodo(newTodo) {
     try {
@@ -36,7 +36,7 @@ export default function TodoItem({ todo, deleteTodo, updateTodo }) {
     }
   }
   return (
-    <li className="d-flex justify-content-center align-items-center p10 mb10">
+    <li className="d-flex justify-content-center align-items-center p10 mb10" name={todo.content}>
       <span className="flex-fill mr10">
         {todo.content} {todo.done && "✔️"}
       </span>
@@ -47,6 +47,7 @@ export default function TodoItem({ todo, deleteTodo, updateTodo }) {
             modifyTodo({ ...todo, done: !todo.done });
           }}
           className="btn btn-primary mr10"
+          name={"done " + todo.content}
         >
           {todo.done ? "Réalisé" : "A faire"}
         </button>
@@ -56,12 +57,14 @@ export default function TodoItem({ todo, deleteTodo, updateTodo }) {
             modifyTodo({ ...todo, edit: !todo.edit });
           }}
           className="btn btn-primary mr10"
+          name={"edit " + todo.content}
         >
           Modifier
         </button>
         <button
           onClick={() => handleDeleteTodo(todo)}
           className="btn btn-primary-reverse mr10"
+          name={"delete " + todo.content}
         >
           Supprimer
         </button>

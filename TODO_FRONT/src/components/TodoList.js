@@ -3,7 +3,7 @@ import EditTodo from "./EditTodo";
 
 export default function TodoList({ todoList, deleteTodo, updateTodo }) {
   return todoList.length ? (
-    <ul>
+    <ul name="todoList">
       {todoList.map((t) =>
         t.edit ? (
           <EditTodo

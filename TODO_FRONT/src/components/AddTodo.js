@@ -54,6 +54,7 @@ export default function AddTodo({ addTodo }) {
       <div className="d-flex justify-content-center align-items-center mb20">
         <input
           aria-label="addTodoInput"
+          name="addTodoInput"
           value={value}
           type="text"
           onChange={handleChange}
@@ -61,7 +62,7 @@ export default function AddTodo({ addTodo }) {
           placeholder="Add a todo"
           className="mr20 flex-fill p10"
         />
-        <button aria-label="addTodoButton" onClick={handleClick} className="btn btn-primary">
+        <button name="addTodoButton" aria-label="addTodoButton" onClick={handleClick} className="btn btn-primary">
           Add
         </button>
       </div>

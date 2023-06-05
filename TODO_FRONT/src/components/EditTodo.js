@@ -49,14 +49,16 @@ export default function EditTodo({ todo, updateTodo }) {
         onKeyDown={handleKeyDown}
         placeholder="Add a todo"
         className="mr20 flex-fill p10"
+        name="edit input"
       />
       <button
         onClick={() => modifyTodo({ ...todo, edit: !todo.edit })}
         className="btn btn-primary-reverse mr10"
+        name="edit cancel"
       >
         Cancel
       </button>
-      <button onClick={handleClick} className="btn btn-primary">
+      <button onClick={handleClick} className="btn btn-primary" name="edit save">
         Save
       </button>
     </div>
