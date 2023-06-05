@@ -113,3 +113,5 @@ app.post("/modifyTodo", (req, res) => {
 app.listen(port, () => {
   console.log(`Serveur Node.js écoutant sur le port ${port}`);
 });
+
+module.exports = app;
