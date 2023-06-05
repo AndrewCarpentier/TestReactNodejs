@@ -50,6 +50,7 @@ describe("<AddTodo/> test", () => {
   });
 
   it("doesn't add an empty todo", async () => {
+    // Prepare mock data
     const mockTodo = {
         content: "",
         edit: false,
