@@ -30,16 +30,16 @@ En résumé, les tests d'intégration visent à garantir le bon fonctionnement g
 
 ## 2. Configuration de l'environnement de test
 Avant de commencer à écrire des tests d'intégration, vous devez configurer votre environnement de test. Vous aurez besoin des éléments suivants :
-- Un framework de test : Jest est un framework de test populaire qui prend en charge les tests d'intégration pour les applications React. Vous pouvez l'installer en exécutant la commande suivante dans le répertoire de votre projet :
+1 **Un framework de test** : Jest est un framework de test populaire qui prend en charge les tests d'intégration pour les applications React. Vous pouvez l'installer en exécutant la commande suivante dans le répertoire de votre projet :
   ```
   npm install --save-dev jest
   ```
-- Un utilitaire de rendu pour React : React Testing Library est recommandé pour les tests d'intégration dans une application React. Il fournit des méthodes et des outils pour interagir avec les composants et effectuer des assertions sur leur rendu. Vous pouvez l'installer en exécutant la commande suivante :
+2 **Un utilitaire de rendu pour React** : React Testing Library est recommandé pour les tests d'intégration dans une application React. Il fournit des méthodes et des outils pour interagir avec les composants et effectuer des assertions sur leur rendu. Vous pouvez l'installer en exécutant la commande suivante :
   ```
   npm install --save-dev @testing-library/react
   ```
 
-## 3. Création des fichiers de test d'intégration
+## 3. Création des fichiers de test d'integration
 Dans votre projet React, vous pouvez créer un répertoire séparé pour les tests d'intégration. Par exemple, vous pouvez créer un répertoire `tests` à la racine de votre projet. À l'intérieur de ce répertoire, vous pouvez créer des fichiers de test avec l'extension `.test.js` ou `.spec.js` pour indiquer qu'il s'agit de fichiers de test.
 
 Voici une structure de fichiers d'exemple :
