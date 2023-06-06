@@ -34,7 +34,7 @@ describe("<AddTodo/> test", () => {
     await waitFor(() => {
       expect(mockAddTodo).toHaveBeenCalledTimes(1);
     });
-
+    
     await waitFor(() => {
       expect(mockAddTodo).toHaveBeenCalledWith({ ...mockTodo, id: mockId });
     });
