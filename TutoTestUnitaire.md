@@ -43,8 +43,19 @@ npm install --save-dev jest
 
 ```bash
 npm install --save-dev @testing-library/react
+```
 
-
+3. **Configuration du script de test** : Ouvrez le fichier `package.json` de votre projet et ajoutez un script pour exécuter les tests unitaire avec Jest. Ajoutez la ligne suivante dans la section `"scripts"` :
+```json
+"scripts": {
+  "test": "jest"
+}
+```
+ou avec react
+```json
+"scripts": {
+  "test": "react-scripts test"
+}
 ```
 
 Une fois ces étapes terminées, vous êtes prêt à écrire des tests unitaires pour vos composants React.

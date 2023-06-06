@@ -26,7 +26,7 @@ Les avantages des tests end-to-end sont nombreux :
 En résumé, les tests end-to-end offrent une vision globale de l'application et permettent de valider son fonctionnement complet du point de vue de l'utilisateur final. Ils sont essentiels pour s'assurer de la qualité et de la convivialité de l'application, en reproduisant des scénarios réels d'utilisation et en vérifiant l'intégration des différentes parties du système.
 
 ## Configuration de l'environnement
-La configuration des tests d'intégration avec Cypress implique quelques étapes pour mettre en place l'environnement de test. Voici un guide pour configurer les tests d'intégration avec Cypress :
+La configuration des tests end-to-end avec Cypress implique quelques étapes pour mettre en place l'environnement de test. Voici un guide pour configurer les tests end-to-end avec Cypress :
 
 1. **Installation de Cypress** : Tout d'abord, vous devez installer Cypress sur votre projet. Vous pouvez le faire en exécutant la commande suivante dans le répertoire de votre projet :
 
@@ -34,18 +34,18 @@ La configuration des tests d'intégration avec Cypress implique quelques étapes
 npm install cypress --save-dev
 ```
 
-2. **Configuration du script de test** : Ouvrez le fichier `package.json` de votre projet et ajoutez un script pour exécuter les tests d'intégration avec Cypress. Ajoutez la ligne suivante dans la section `"scripts"` :
+2. **Configuration du script de test** : Ouvrez le fichier `package.json` de votre projet et ajoutez un script pour exécuter les tests end-to-end avec Cypress. Ajoutez la ligne suivante dans la section `"scripts"` :
 
 ```json
 "scripts": {
-  "test:integration": "cypress open"
+  "test:e2e": "cypress open"
 }
 ```
 
-3. **Exécution des tests** : Pour exécuter les tests d'intégration, vous pouvez exécuter la commande suivante dans votre terminal :
+3. **Exécution des tests** : Pour exécuter les tests end-to-end, vous pouvez exécuter la commande suivante dans votre terminal :
 
 ```
-npm run test:integration
+npm run test:e2e
 ```
 ou 
 ```
@@ -54,7 +54,7 @@ npx cypress open
 
 Cela lancera l'interface graphique de Cypress où vous pouvez sélectionner les tests que vous souhaitez exécuter ou exécuter tous les tests automatiquement.
 
-4. **Configuration avancée** : Cypress offre de nombreuses fonctionnalités avancées pour la configuration des tests d'intégration. Vous pouvez configurer des plugins, des variables d'environnement, des serveurs, des intercepteurs de requêtes, etc. Pour cela, vous pouvez créer un fichier de configuration `cypress.json` à la racine de votre projet et définir vos options de configuration.
+4. **Configuration avancée** : Cypress offre de nombreuses fonctionnalités avancées pour la configuration des tests end-to-end. Vous pouvez configurer des plugins, des variables d'environnement, des serveurs, des intercepteurs de requêtes, etc. Pour cela, vous pouvez créer un fichier de configuration `cypress.json` à la racine de votre projet et définir vos options de configuration.
 
 ## Structure du fichier de test
 Chaque fichier de test Cypress suit une structure de base. Voici comment organiser votre fichier de test :
