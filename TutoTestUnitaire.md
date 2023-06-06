@@ -1,15 +1,19 @@
 # Tuto Test Unitaires
 
 ## Sommaire
-1. Pourquoi faire des tests unitaires ?
-2. Configuration de l'environnement de test
-3. Création de fichiers de test
-4. Écriture des tests unitaires
-5. Exécution des tests
+## Sommaire
+1. [Introduction aux tests unitaires](#introduction-aux-tests-unitaires)
+2. [Configuration de l'environnement de test](#configuration-de-lenvironnement-de-test)
+3. [Création de fichiers de test](#creation-de-fichiers-de-test)
+4. [Écriture des tests unitaires](#ecriture-des-tests-unitaires)
+5. [Exécution des tests](#execution-des-tests)
 
-## Pourquoi faire des tests unitaires ?
+## Introduction aux tests unitaires
+Les tests unitaires sont une pratique essentielle en développement logiciel qui consiste à tester chaque unité de code de manière isolée pour s'assurer de son bon fonctionnement. Une unité de code peut être une fonction, une méthode ou une classe.
 
-Les tests unitaires sont essentiels dans le processus de développement logiciel pour plusieurs raisons :
+L'objectif principal des tests unitaires est de valider le comportement d'une unité de code en s'assurant qu'elle produit les résultats attendus. Cela permet de détecter les erreurs et les bugs dès le début du processus de développement, facilitant ainsi leur résolution et réduisant les risques de régressions.
+
+Les avantages des tests unitaires sont nombreux :
 
 1. **Détection précoce des erreurs** : Les tests unitaires permettent de détecter les erreurs et les bugs dès les premières étapes du développement, ce qui facilite leur correction et réduit les coûts associés.
 
@@ -103,7 +107,7 @@ describe('MyComponent', () => {
   });
 });
 ```
-Le code utilise la fonction 'describe' pour regrouper un ensemble de tests liés à un composant spécifique (dans cet exemple, 'MyComponent'). À l'intérieur de 'describe', vous définissez des tests individuels à l'aide de la fonction 'test' (ou 'it').
+Le code utilise la fonction `describe` pour regrouper un ensemble de tests liés à un composant spécifique (dans cet exemple, `MyComponent`). À l'intérieur de `describe`, vous définissez des tests individuels à l'aide de la fonction `test` (ou `it`).
 1.	Génération : Cette étape consiste à créer les données ou les objets nécessaires pour le test. Par exemple, si vous testez un composant, vous pouvez créer une instance de ce composant.
 
 2.	Actions : Cette étape effectue les actions ou les opérations que vous souhaitez tester. Cela peut inclure l'appel de méthodes, l'interaction avec des composants ou toute autre action que vous voulez tester.
@@ -128,15 +132,14 @@ describe('MyComponent', () => {
     expect(sum).toBe(15);
   });
 });
-
 ```
 Dans cet exemple, nous testons une fonction hypothétique qui additionne deux nombres. Voici comment les étapes sont implémentées :
 
-1.	Génération : Nous générons les données nécessaires pour notre test, à savoir ‘num1’ et ‘num2’, qui sont définis respectivement à 5 et 10.
+1.	Génération : Nous générons les données nécessaires pour notre test, à savoir `num1` et `num2`, qui sont définis respectivement à 5 et 10.
 
-2.	Actions : Nous effectuons l'action que nous voulons tester, dans ce cas, nous additionnons ‘num1’ et ‘num2’ et stockons le résultat dans ‘sum’.
+2.	Actions : Nous effectuons l'action que nous voulons tester, dans ce cas, nous additionnons `num1` et `num2` et stockons le résultat dans `sum`.
 
-3.	Assertions : Nous utilisons la fonction d'assertion ‘expect’ pour vérifier si ‘sum’ est égal à 15, ce qui est le résultat attendu de l'addition de 5 et 10. Si l'assertion échoue, le test échouera.
+3.	Assertions : Nous utilisons la fonction d'assertion `expect` pour vérifier si `sum` est égal à 15, ce qui est le résultat attendu de l'addition de 5 et 10. Si l'assertion échoue, le test échouera.
 
 ## Exécution des tests
 
