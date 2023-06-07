@@ -25,15 +25,15 @@ describe("<AddTodo/> test", () => {
       content: "add todo test",
       edit: false,
       done: false,
+      id : 0
     };
-    const mockId = 0;
     const mockAddTodo = jest.fn();
 
     // Mock the fetch function to return a response with the generated ID
     jest.spyOn(global, "fetch").mockImplementation(() =>
       Promise.resolve({
         ok: true,
-        json: () => Promise.resolve({ ...mockTodo, id: mockId }),
+        json: () => Promise.resolve({ ...mockTodo}),
       })
     );
 
@@ -52,7 +52,7 @@ describe("<AddTodo/> test", () => {
     });
     
     await waitFor(() => {
-      expect(mockAddTodo).toHaveBeenCalledWith({ ...mockTodo, id: mockId });
+      expect(mockAddTodo).toHaveBeenCalledWith({ ...mockTodo});
     });
 
     // Restore the original fetch function
@@ -65,6 +65,7 @@ describe("<AddTodo/> test", () => {
       content: "",
       edit: false,
       done: false,
+      id : 0
     };
     const mockId = 0;
     const mockAddTodo = jest.fn();
