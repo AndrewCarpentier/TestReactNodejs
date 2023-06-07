@@ -67,7 +67,6 @@ describe("<AddTodo/> test", () => {
       done: false,
       id : 0
     };
-    const mockId = 0;
     const mockAddTodo = jest.fn();
     // Render the component
     render(<AddTodo addTodo={mockAddTodo} />);
@@ -84,7 +83,7 @@ describe("<AddTodo/> test", () => {
     });
 
     await waitFor(() => {
-      expect(mockAddTodo).not.toHaveBeenCalledWith({ ...mockTodo, id: mockId });
+      expect(mockAddTodo).not.toHaveBeenCalledWith({ ...mockTodo });
     });
   });
 });
