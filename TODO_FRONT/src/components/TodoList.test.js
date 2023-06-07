@@ -16,12 +16,15 @@ describe("<TodoList/> test", () => {
 
     // Retrieve the list items from the rendered component
     const listItem = screen.getAllByRole("listitem");
-    // Retrieve the first todo from the rendered component
     const firstTodo = screen.getByText("first todo");
+    const secondTodo = screen.getByText("second todo");
+    const thirdTodo = screen.getByText("third todo");
 
     // Assert the expected behavior
     expect(listItem.length).toEqual(3); // Check that there are 3 list items rendered
     expect(firstTodo).toHaveTextContent("first todo"); // Check that the first todo is rendered with the correct content
+    expect(secondTodo).toHaveTextContent("second todo"); // Check that the second todo is rendered with the correct content
+    expect(thirdTodo).toHaveTextContent("third todo"); // Check that the third todo is rendered with the correct content
   });
 
   it("verify <TodoList/> when list is empty", () => {
